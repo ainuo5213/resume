@@ -162,8 +162,8 @@
                 <div class="box bg-gray-lightest" style="line-height: 2rem">
                     ● 2020-07至今于上海梵讯担任后端工程师主要：<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;1. 房产微站项目后端的迭代开发；<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;2. 新楼盘项目技术选型（.NET 5）、架构设计和搭建（目录分布、基础设施建设、常用工具类库和验证特性封装），主要负责新楼盘系统后端接口服务。<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;3. 新楼盘saas平台项目技术选型、架构设计和搭建，加入了“基于策略模式的自定义授权验证”
+                        &nbsp;&nbsp;&nbsp;&nbsp;2. 新楼盘项目技术选型（.NET 5）、架构设计和搭建（目录分布、基础设施建设、常用工具类库和验证特性封装），主要负责新楼盘系统后端接口服务和部分对接微信（公众号、小程序服务端接口）的开发。<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;3. 新楼盘saas平台项目技术选型、架构设计和搭建，加入了“基于策略模式的自定义授权验证拦截”
                 </div>
             </div>
         </section>
@@ -174,28 +174,40 @@
                 <div class="box bg-gray-lightest">
                     ● backtask：基于quartz.NET框架的json配置的定时调度框架（含UI后台）
                     <a href="https://gitee.com/ainuo5/back-task"
-                        target="_blank">https://gitee.com/ainuo5/back-task</a>
+                        target="_blank">https://gitee.com/ainuo5/back-task</a><br><br>
+                    初衷：一个动作需要每天定时执行，但又不想讲业务和实际项目分开，故利用quartz.NET进行对应的封装，使用者仅需配置json对象所需要的必要配置（如url、调用频次等）<br><br>
+                    方法：继承，封装，多态和建造者模式，中间件思想<br><br>
+                    思路：外部可基于不同数据源进行扩展方法配置（使用者需要配置数据源），该数据源需要继承抽象类。程序执行时，将数据源转换成内存中任务队列，并将其转换成quartz.NET的可执行任务。
                 </div>
             </div>
             <div class="boxes default m-b-20">
                 <div class="box bg-gray-lightest">
                     ● 工具类库：typescript重构axios
                     <a href="https://www.npmjs.com/package/axios-ts-ainuo"
-                        target="_blank">https://www.npmjs.com/package/axios-ts-ainuo</a>
+                        target="_blank">https://www.npmjs.com/package/axios-ts-ainuo</a><br><br>
+                    初衷：深入js，了解类库如何封装，如何发布npm包<br><br>
+                    方法：健壮，可扩展性，正确性<br><br>
+                    思路：阅读axios源码，基于axios源码和自己的理解，在考虑代码扩展性、健壮性和正确性的基础上，实现axios，并理解透彻类库封装原理和npm包发布流程
                 </div>
             </div>
             <div class="boxes default m-b-20">
                 <div class="box bg-gray-lightest">
                     ● react项目：github的OAuth2接入
                     <a href="https://github.com/ainuo5213/github_next"
-                        target="_blank">https://github.com/ainuo5213/github_next</a>
+                        target="_blank">项目链接：https://github.com/ainuo5213/github_next</a><br><br>
+                    初衷：练习react和接入第三方服务平台开发<br><br>
+                    方法：阅读github开发文档，了解认证和授权流程<br><br>
+                    思路：确定oauth2认证和授权类型——code模式，根据github develper guide进行对应授权流程代码的编写，项目采用react服务端渲染框架next编写，主要模块包括授权，仓库列表，仓库关键字搜索和仓库详情等页面开发
                 </div>
             </div>
             <div class="boxes default m-b-20">
                 <div class="box bg-gray-lightest">
                     ● HolidaySharp：.NET 中国节气和节日获取的类库
                     <a href="https://github.com/ainuo5213/HolidaySharp"
-                        target="_blank">https://github.com/ainuo5213/HolidaySharp</a>
+                        target="_blank">https://github.com/ainuo5213/HolidaySharp</a><br><br>
+                        初衷：项目需要计算每一年的节气、重大节日进行任务排班<br><br>
+                        方法：分别枚举每一年重大节日的阳历日期，每年节气的通用公式，对于异常年份进行修正<br><br>
+                        思路：农历和阳历互转的方法编写和兼容，编写对应重载方法的实现
                 </div>
             </div>
         </section>
